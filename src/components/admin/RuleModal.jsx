@@ -22,7 +22,7 @@ const RuleModal = ({ data, value, onClose, alldata }) => {
     axios
       .post("https://api.npoint.io/1d7ed0e2e20c23cb5c1f", alldata)
       .then(() => {
-        navigate(0);
+        navigate("/admin-update-rule");
       });
     console.log(alldata);
   };
