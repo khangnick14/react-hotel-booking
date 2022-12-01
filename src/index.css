@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --dark-primary: #0077b6;
+  --light-primary: #90e0ef;
+  --dark-red: #dc1c13;
+  --light-red: #f6bdc0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-[Lato];
+  }
+  li {
+    @apply p-4 text-lg;
+  }
+  h1 {
+    @apply text-2xl md:text-2xl font-bold;
+  }
+  h2 {
+    @apply text-xl font-bold;
+  }
+  h3 {
+    @apply text-lg font-bold;
+  }
+  button {
+    @apply px-5 py-3 border bg-gradient-to-r from-[var(--dark-primary)] to-[var(--light-primary)] text-white rounded-lg;
+  }
+  button.light {
+    @apply px-5 py-3 border bg-gradient-to-r from-[var(--dark-red)] to-[var(--light-red)] text-white rounded-lg;
+  }
 }

@@ -1,0 +1,74 @@
+{
+  "name": "The Princess of Arena Cam Ranh Homewww",
+  "email": "rsvn.ams@arenams.vn",
+  "owner": "The Arena",
+  "phone": "02583968888",
+  "photo": {
+    "view1": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/397679601.jpg?k=8d420d6fcd15cae1e327c759b8aa44e7a893f66db176e53983c3a6f83845d82c&o=&hp=1",
+    "view2": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/396662291.jpg?k=3d4414ab19b4813a46fd246b4b64f34d0b0a2e7d24dd4ad049aab90c8109c3b8&o=&hp=1",
+    "view3": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/397680327.jpg?k=8a794b7145d9554f3d2d1e07385ccb888042f57e8ed37df162bcadcf3fb5987f&o=&hp=1",
+    "view4": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/397680326.jpg?k=d5d994117787993cf4c3f046a9cfaa022fc9bd92746fb6120973b54a7b46b10d&o=&hp=1",
+    "view5": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/397680029.jpg?k=1480bc54c90597d8e2c4dc76be463b69c248871eb19aba78bdbbda511c073b73&o=&hp=1",
+    "view6": "https://thearena.vn/storage/sliders/thearenacamranh.jpg"
+  },
+  "address": "26H7+WRQ, Nguyễn Tất Thành, Cam Hải Đông, Tp. Cam Ranh, Khánh Hòa 57000",
+  "houseRule": {
+    "pet": "Pets are not allow",
+    "checkIn": "14:00-22:00",
+    "parties": "Parties/events are not allowed",
+    "payment": "This property only accepts cash payments.",
+    "smoking": "Smoking is not allowed.",
+    "checkOut": "8:00-12:00",
+    "childPolicy": "Children of any age are welcome. Children aged 18 years and above are considered adults at this property. To see correct prices and occupancy information, please add the number of children in your group and their ages to your search.",
+    "cancellation": "Cancellation and prepayment policies vary according to apartment type.",
+    "ageRestriction": "There is no age requirement for check-in",
+    "extraBedPolicy": "No costs or extra beds are available."
+  },
+  "ultilities": ["AC", "Terrace", "Pool", "Gym", "Restaurant", "Beach"],
+  "description": [
+    "Located in Miếu Ông in the Khanh Hoa region, The Princess of Arena Cam Ranh Home has a balcony. Situated a few steps from Bai Dai Beach, the property features a garden and free private parking.",
+    "The air-conditioned apartment consists of 1 bedroom, a kitchen and 1 bathroom. A flat-screen TV is available.",
+    "A terrace is available for guests to use at the apartment.",
+    "100 Egg Mud Bath is 33 km from The Princess of Arena Cam Ranh Home, while Alexandre Yersin Museum is 40 km from the property. The nearest airport is Cam Ranh International Airport, 7 km from the accommodation."
+  ],
+  "listOfRooms": [
+    {
+      "id": 0,
+      "beds": "2 single beds",
+      "name": "Deluxe",
+      "rate": 49,
+      "size": 36,
+      "photo": "http://thearena.vn/storage/rooms/room1/deluxe-7.jpg",
+      "quantity": "4 Deluxe rooms"
+    },
+    {
+      "id": 1,
+      "beds": "1 double bed",
+      "name": "Deluxe Seaview",
+      "rate": 60,
+      "size": 36,
+      "photo": "http://thearena.vn/storage/rooms/room2/deluxe-seaview-7.jpg",
+      "quantity": "4 Deluxe Seaview rooms"
+    },
+    {
+      "id": 2,
+      "beds": "1 double bed",
+      "name": "Premier Ocean Front",
+      "rate": 80,
+      "size": 38,
+      "photo": "https://thearena.vn/storage/rooms/room3/premier-ocean-front-3.jpg",
+      "quantity": "4 Premier Ocean Front rooms"
+    },
+    {
+      "id": 3,
+      "beds": "1 double bed",
+      "name": "Suite One Bed Room",
+      "rate": 97,
+      "size": 68,
+      "photo": "https://thearena.vn/storage/rooms/room4/premier-ocean-front-4.jpg",
+      "quantity": "4 Suite One Bed Room rooms"
+    }
+  ],
+  "shortAddress": "Toà Sea - Khu nghỉ The Arena, Miếu Ông, Vietnam",
+  "coordinationMapLink": "https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=UniveThe Princess of Arena Cam Ranh Homersity of Oxford&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+}
