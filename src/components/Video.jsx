@@ -23,8 +23,8 @@ const Video = ({ data }) => {
           <h2>{data?.shortAddress}</h2>
         </div>
         <div className="flex justify-center mt-3">
-          <button className="flex justify-center">
-            <FaTelegramPlane className="mr-3" size={25} />
+          <button className="basic flex justify-center">
+            <FaTelegramPlane className="mr-2" size={15} />
             <Link to="room" spy={true} smooth={true} offset={0} duration={500}>
               BOOK NOW
             </Link>

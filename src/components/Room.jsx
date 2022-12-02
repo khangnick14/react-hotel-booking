@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import { MdFreeBreakfast, MdHouse } from "react-icons/md";
 import { GoX, GoThumbsup, GoPrimitiveDot } from "react-icons/go";
 import RoomModal from "./admin/RoomModal";
+import ReserveModal from "./ReserveModal";
 
 const Room = ({ data }) => {
   const [admin, setAdmin] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [openReserveModal, setOpenReserveModal] = useState(false);
+
   const [object, setObject] = useState({});
   const [index, setIndex] = useState(0);
+  const [quantity, setQuantity] = useState(0);
 
   useEffect(() => {
     if (
@@ -27,8 +31,17 @@ const Room = ({ data }) => {
     console.log(i);
   };
 
+  const startReserveModal = (e, i) => {
+    setOpenReserveModal(true);
+    setObject(e);
+    setIndex(i);
+    console.log(e);
+    console.log(i);
+  };
+
   const handleOnClose = () => {
     setOpenModal(false);
+    setOpenReserveModal(false);
   };
 
   return (
@@ -52,9 +65,6 @@ const Room = ({ data }) => {
               </th>
               <th className="px-5 py-3 border-b-2 border-[var(--light-primary)] bg-[var(--dark-primary)] text-left text-xs font-semibold text-white uppercase tracking-wider">
                 Your choices
-              </th>
-              <th className="px-5 py-3 border-b-2 border-[var(--light-primary)] bg-[var(--dark-primary)] text-left text-xs font-semibold text-white uppercase tracking-wider">
-                Select quantity
               </th>
               <th className="px-5 py-3 border-b-2 border-[var(--light-primary)] bg-[var(--dark-primary)] text-left text-xs font-semibold text-white uppercase tracking-wider"></th>
               {admin && (
@@ -122,23 +132,14 @@ const Room = ({ data }) => {
                       </div>
                     </div>
                   </td>
-                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                    <select
-                      name=""
-                      id=""
-                      className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    >
-                      <option selected>0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </td>
+
                   <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                     <div>
                       <div className="flex justify-center my-3">
-                        <button className="flex justify-center">
+                        <button
+                          onClick={() => startReserveModal(item, item.id)}
+                          className="primary flex justify-center"
+                        >
                           I'll reserve
                         </button>
                       </div>
@@ -166,7 +167,7 @@ const Room = ({ data }) => {
                     <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                       <button
                         onClick={() => openModalClick(item, item.id)}
-                        className="light"
+                        className="danger"
                       >
                         EDIT
                       </button>
@@ -174,6 +175,15 @@ const Room = ({ data }) => {
                   )}
                   {openModal && (
                     <RoomModal
+                      onClose={handleOnClose}
+                      data={object}
+                      value={object.id}
+                      alldata={data}
+                    />
+                  )}
+
+                  {openReserveModal && !admin && (
+                    <ReserveModal
                       onClose={handleOnClose}
                       data={object}
                       value={object.id}

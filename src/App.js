@@ -7,7 +7,7 @@ import useFetch from "./components/useFetch";
 import AdminUpdateBasic from "./components/admin/AdminUpdateBasic";
 import AdminUpdateRoom from "./components/admin/AdminUpdateRoom";
 import AdminUpdateRule from "./components/admin/AdminUpdateRule";
-import RuleModal from "./components/admin/RuleModal";
+import AdminUpdatePrice from "./components/admin/AdminUpdatePrice";
 
 function App() {
   const url = "https://api.npoint.io/1d7ed0e2e20c23cb5c1f";
@@ -31,7 +31,10 @@ function App() {
           path="/admin-update-rule"
           element={<AdminUpdateRule data={data} />}
         />
-        <Route path="/modal" element={<RuleModal data={data} />} />
+        <Route
+          path="/admin-update-price"
+          element={<AdminUpdatePrice data={data} />}
+        />
       </Routes>
     </Router>
   );

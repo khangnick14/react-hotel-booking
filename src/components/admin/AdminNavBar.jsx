@@ -12,16 +12,19 @@ const AdminNavBar = () => {
     setLogo(!logo);
   };
   return (
-    <div className="flex w-full justify-between items-center h-20 px-4 absolute z-10 text-black text-opacity-90">
+    <div className="flex w-full justify-between items-center h-20  px-4 absolute z-10 text-black text-opacity-90">
       <div>
-        <h1 onClick={navAction} className={logo ? "hidden" : "block"}>
+        <h1
+          onClick={navAction}
+          className={logo ? "hidden" : "block text-black-700"}
+        >
           ADMIN PAGE.
         </h1>
       </div>
       <ul className="hidden md:flex">
         <li className="cursor-pointer">
           <button
-            className="light"
+            className="success"
             onClick={() => {
               navigate("/");
             }}
@@ -29,9 +32,9 @@ const AdminNavBar = () => {
             HOME
           </button>
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-pointer ">
           <button
-            className="light"
+            className="success"
             onClick={() => {
               navigate("/admin-update-basic");
             }}
@@ -41,7 +44,7 @@ const AdminNavBar = () => {
         </li>
         <li className="cursor-pointer">
           <button
-            className="light"
+            className="success"
             onClick={() => {
               navigate("/admin-update-rule");
             }}
@@ -51,12 +54,22 @@ const AdminNavBar = () => {
         </li>
         <li className="cursor-pointer">
           <button
-            className="light"
+            className="success"
             onClick={() => {
               navigate("/admin-update-room");
             }}
           >
             ROOMS
+          </button>
+        </li>
+        <li className="cursor-pointer">
+          <button
+            className="success"
+            onClick={() => {
+              navigate("/admin-update-price");
+            }}
+          >
+            UPDATE PRICE
           </button>
         </li>
       </ul>
@@ -81,10 +94,47 @@ const AdminNavBar = () => {
         }
       >
         <ul>
-          <h1>PRINCESS OF ARENA CAM RANH HOME</h1>
-          <li>Basic Information</li>
-          <li>Rule</li>
-          <li>Room</li>
+          <h1>ADMIN.</h1>
+          <li>
+            <button
+              className="success"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              HOME
+            </button>
+          </li>
+          <li>
+            <button
+              className="success"
+              onClick={() => {
+                navigate("/admin-update-rule");
+              }}
+            >
+              RULES
+            </button>
+          </li>
+          <li>
+            <button
+              className="success"
+              onClick={() => {
+                navigate("/admin-update-room");
+              }}
+            >
+              ROOMS
+            </button>
+          </li>
+          <li>
+            <button
+              className="success"
+              onClick={() => {
+                navigate("/admin-update-price");
+              }}
+            >
+              UPDATE PRICE
+            </button>
+          </li>
         </ul>
       </div>
     </div>

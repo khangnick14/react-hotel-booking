@@ -91,7 +91,7 @@ const AdminLogIn = ({ data }) => {
               <p className="text-red-600 text-mm mt-2">{errors.password}</p>
             )}
           </div>
-          <button className="w-full my-5 py-2">SignIn</button>
+          <button className="secondary w-full my-5 py-2">Sign In</button>
         </form>
       </div>
     </div>

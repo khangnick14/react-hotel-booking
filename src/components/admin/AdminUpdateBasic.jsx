@@ -92,7 +92,7 @@ const AdminUpdateBasic = ({ data }) => {
               onChange={handleOnChange}
             />
           </div>
-          <button className="w-full my-8">Submit</button>
+          <button className="basic w-full my-8">Submit</button>
         </form>
       </div>
     </div>
