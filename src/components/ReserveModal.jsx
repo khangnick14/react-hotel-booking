@@ -37,9 +37,10 @@ const ReserveModal = ({ data, value, onClose, alldata }) => {
     );
     const breakfastPrice = breakfast ? dayReservedList.length * 5 : 0;
     const finalPrice =
-      (dayReservedList.length - results.length) * data.rate +
-      priceUpdated +
-      breakfastPrice;
+      ((dayReservedList.length - results.length) * data.rate +
+        priceUpdated +
+        breakfastPrice) *
+      quantity;
     setTotalPrice(finalPrice);
     update.totalPrice = finalPrice;
     setStartDate(new Date());
