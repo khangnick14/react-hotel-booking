@@ -5,8 +5,10 @@ import { AiOutlineClose } from "react-icons/ai";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { Link as Navigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [nav, setNav] = useState(false);
   const [logo, setLogo] = useState(false);
   const navAction = () => {
@@ -75,13 +77,42 @@ const Navbar = () => {
       >
         <ul>
           <h1>PRINCESS OF ARENA CAM RANH HOME</h1>
-          <li>Home</li>
-          <li>About</li>
-          <li>Room</li>
-          <li>Rule</li>
+          <li className="cursor-pointer">
+            <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
+              Home
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="about" spy={true} smooth={true} offset={0} duration={500}>
+              About
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link
+              to="gallery"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Gallery
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="room" spy={true} smooth={true} offset={0} duration={500}>
+              Room
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="rule" spy={true} smooth={true} offset={0} duration={500}>
+              {"Rule"}
+            </Link>
+          </li>
           <div className="flex flex-col">
-            <button className="my-3">Search</button>
-            <button>Sign-In</button>
+            <button className="secondary my-3">Search</button>
+            <button onClick={() => navigate("/admin")} className="success">
+              Sign-In
+            </button>
           </div>
         </ul>
       </div>

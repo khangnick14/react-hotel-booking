@@ -27,7 +27,7 @@ const RoomModal = ({ data, value, onClose, alldata }) => {
     axios
       .post("https://api.npoint.io/1d7ed0e2e20c23cb5c1f", alldata)
       .then(() => {
-        navigate("/admin-update-room");
+        navigate(0);
         console.log(alldata);
       });
   };
@@ -109,7 +109,7 @@ const RoomModal = ({ data, value, onClose, alldata }) => {
           />
         </div>
 
-        <button className="w-full my-5 py-2">Submit</button>
+        <button className="secondary w-full my-5 py-2">Submit</button>
       </form>
     </div>
   );
