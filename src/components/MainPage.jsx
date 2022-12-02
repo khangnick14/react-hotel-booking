@@ -7,7 +7,6 @@ import Video from "./Video";
 import Rule from "./Rule";
 import Footer from "./Footer";
 import ScrollTop from "./ScrollTop";
-import useFetch from "./useFetch";
 
 const MainPage = ({ data }) => {
   return (

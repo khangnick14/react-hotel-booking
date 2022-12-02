@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { MdFreeBreakfast, MdHouse } from "react-icons/md";
 import { GoX, GoThumbsup, GoPrimitiveDot } from "react-icons/go";
-import RoomModal from "./admin/RoomModal";
-import ReserveModal from "./ReserveModal";
+import RoomModal from "./modal/RoomModal";
+import ReserveModal from "./modal/ReserveModal";
 
 const Room = ({ data }) => {
   const [admin, setAdmin] = useState(false);
@@ -11,7 +11,6 @@ const Room = ({ data }) => {
 
   const [object, setObject] = useState({});
   const [index, setIndex] = useState(0);
-  const [quantity, setQuantity] = useState(0);
 
   useEffect(() => {
     if (

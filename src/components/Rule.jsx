@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBookOpen } from "react-icons/fa";
-import RuleModal from "./admin/RuleModal";
+import RuleModal from "./modal/RuleModal";
 
 const Rule = ({ data }) => {
   const [admin, setAdmin] = useState(false);

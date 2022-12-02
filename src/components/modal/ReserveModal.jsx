@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
 import { DayPicker } from "react-day-picker";
@@ -8,7 +8,6 @@ import swal from "sweetalert";
 const ReserveModal = ({ data, value, onClose, alldata }) => {
   const navigate = useNavigate();
   const [update, setUpdate] = useState({ guest: 0 });
-  const [quantity, setQuantity] = useState(0);
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [totalPrice, setTotalPrice] = useState(0);
@@ -40,7 +39,7 @@ const ReserveModal = ({ data, value, onClose, alldata }) => {
       ((dayReservedList.length - results.length) * data.rate +
         priceUpdated +
         breakfastPrice) *
-      quantity;
+      update.quantity;
     setTotalPrice(finalPrice);
     update.totalPrice = finalPrice;
     setStartDate(new Date());
