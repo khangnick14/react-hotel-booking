@@ -12,7 +12,12 @@ import AdminUpdatePrice from "./components/admin/AdminUpdatePrice";
 function App() {
   const url = "https://api.npoint.io/1d7ed0e2e20c23cb5c1f";
   const { data, loading, error } = useFetch(url);
-  if (loading) return <h1>LOADING....</h1>;
+  if (loading)
+    return (
+      <div className="h-screen flex justify-center items-center">
+        <h1>LOADING....</h1>
+      </div>
+    );
   if (error) console.log(error);
   return (
     <Router>

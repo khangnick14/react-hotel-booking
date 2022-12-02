@@ -14,11 +14,9 @@
 @layer base {
   * {
     @apply scroll-smooth;
-  }
-
-  body {
     @apply font-[Lato];
   }
+
   li {
     @apply p-4 text-lg;
   }
